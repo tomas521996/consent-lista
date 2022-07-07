@@ -1,0 +1,83 @@
+// ------------------------ //
+//          BUTTONS         //
+// ------------------------ //
+#onetrust-banner-sdk button {
+	border-radius: $radius;
+}
+
+#onetrust-consent-sdk #onetrust-accept-btn-handler {
+	color: $white;
+
+	&:hover {
+		background-color: $dark-orange;
+		border-color: $dark-orange;
+	}
+
+	&:focus {
+		background-color: $dark-orange;
+		border-color: $dark-orange;
+	}
+}
+
+
+#onetrust-consent-sdk #onetrust-reject-all-handler,
+#onetrust-consent-sdk #onetrust-pc-btn-handler {
+	color: $light-orange;
+	background-color: $transparent;
+	border-color: $light-orange;
+
+	&:hover {
+		color: $white;
+		background-color: $dark-orange;
+		border-color: $dark-orange;
+	}
+
+	&:focus {
+		color: $white;
+		background-color: $dark-orange;
+		border-color: $dark-orange;
+	}
+}
+
+#onetrust-banner-sdk :not(.ot-leg-btn-container)>button:not(.ot-link-btn):hover,
+#onetrust-banner-sdk :not(.ot-leg-btn-container)>button:not(.ot-link-btn):focus {
+	opacity: 1 !important;
+}
+
+#onetrust-banner-sdk.ot-iab-2 #onetrust-button-group {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	& button {
+		display: block !important;
+	}
+}
+
+#onetrust-accept-btn-handler {
+	order: 3;
+	position: absolute  !important;
+	right: 0px !important;
+}
+
+@media only screen and (max-width: 425px) {
+	#onetrust-accept-btn-handler {
+		position: static !important;
+	}
+	}
+
+#onetrust-reject-all-handler {
+	order: 1;
+}
+
+#onetrust-pc-btn-handler {
+	order: 2;
+}
+
+
+#onetrust-banner-sdk #onetrust-accept-btn-handler,
+#onetrust-banner-sdk #onetrust-reject-all-handler,
+#onetrust-banner-sdk #onetrust-pc-btn-handler {
+	min-width: 200px !important;
+	min-height: 50px !important;
+}

@@ -1,0 +1,42 @@
+// -------------------------------------- //
+//          SETTINGS COOKIE               //
+// -------------------------------------- //
+
+.ot-pc-footer-logo, .ot-pc-logo {
+	display: none !important;
+}
+
+#onetrust-pc-sdk.otPcCenter {
+	box-shadow: none !important;
+}
+
+#onetrust-pc-sdk .ot-switch-nob {
+	background-color: $red;
+	border-color: $red;
+
+&:before {
+	background-color: $white;
+}
+}
+
+#onetrust-pc-sdk .ot-tgl input:checked+.ot-switch .ot-switch-nob {
+	background-color: $green;
+	border-color: $green;
+}
+
+#onetrust-pc-sdk .ot-vs-list .ot-always-active,
+#onetrust-pc-sdk .ot-cat-grp .ot-always-active {
+	color: $green;
+}
+
+#onetrust-pc-sdk .ot-cat-grp div {
+	background-color: $white;
+}
+
+.ot-cat-header {
+color: $dark-blue;
+}
+
+.ot-accordion-layout p {
+	color: $light-black;
+}

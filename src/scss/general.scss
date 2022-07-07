@@ -1,0 +1,80 @@
+@import "_variables.scss";
+@import "_buttons.scss";
+@import "_settings-cookie.scss";
+
+.App-header {
+	height: 100vh;
+	width: 100vw;
+	background-color: #fefefe;
+}
+
+.ot-sdk-container {
+	max-width: 1170px !important;
+
+& #onetrust-group-container {
+	max-width: 1170px !important;
+}
+}
+
+#onetrust-banner-sdk .ot-sdk-two.ot-sdk-columns {
+	width: 100%;
+}
+
+#onetrust-consent-sdk #onetrust-banner-sdk *:focus,
+#onetrust-consent-sdk #onetrust-banner-sdk:focus {
+	outline-color: $transparent;
+	outline-width: 0px !important;
+}
+
+
+#onetrust-banner-sdk.vertical-align-content #onetrust-button-group-parent {
+	position: static !important;
+	transform: translateY(0) !important;
+	margin-bottom: 2rem;
+}
+
+#onetrust-banner-sdk .ot-sdk-ten.ot-sdk-columns,
+#onetrust-banner-sdk .ot-sdk-two.ot-sdk-columns {
+	width: 100% !important;
+}
+
+#onetrust-banner-sdk #onetrust-policy {
+	margin: 4rem 0 2rem !important;
+}
+
+.ot-sdk-container::after {
+	height: 10px;
+	width: 100%;
+	background-color: $orange;
+	position: absolute;
+	top: 0px;
+	border-radius: 0px 0px 3px 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#onetrust-banner-sdk .ot-sdk-row:after {
+		padding: 5px 100px !important;
+		color: $orange;
+		content: "" !important;
+		z-index: 999999999999 !important;
+		position: absolute !important;
+	}
+
+	#onetrust-banner-sdk  {
+		position: relative !important;
+	}
