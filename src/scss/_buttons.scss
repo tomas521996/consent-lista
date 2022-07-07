@@ -68,6 +68,7 @@
 
 #onetrust-reject-all-handler {
 	order: 1;
+	margin-right: 50px !important;
 }
 
 #onetrust-pc-btn-handler {
@@ -78,6 +79,6 @@
 #onetrust-banner-sdk #onetrust-accept-btn-handler,
 #onetrust-banner-sdk #onetrust-reject-all-handler,
 #onetrust-banner-sdk #onetrust-pc-btn-handler {
-	min-width: 200px !important;
-	min-height: 50px !important;
+	min-width: 180px !important;
+	min-height: 45px !important;
 }

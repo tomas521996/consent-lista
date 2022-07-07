@@ -2,17 +2,20 @@
 @import "_buttons.scss";
 @import "_settings-cookie.scss";
 
+// ------------ Vymazať slúži iba na test ------------ //
 .App-header {
 	height: 100vh;
 	width: 100vw;
 	background-color: #fefefe;
 }
+// ------------ Vymazať slúži iba na test ------------ //
+
 
 .ot-sdk-container {
 	max-width: 1170px !important;
 
 & #onetrust-group-container {
-	max-width: 1170px !important;
+	max-width: 950px !important;
 }
 }
 
@@ -39,7 +42,10 @@
 }
 
 #onetrust-banner-sdk #onetrust-policy {
-	margin: 4rem 0 2rem !important;
+	margin-top: 4rem !important;
+	margin-right: auto  !important;
+	margin-bottom: 2rem  !important;
+	margin-left: auto  !important;
 }
 
 .ot-sdk-container::after {
@@ -50,31 +56,3 @@
 	top: 0px;
 	border-radius: 0px 0px 3px 3px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#onetrust-banner-sdk .ot-sdk-row:after {
-		padding: 5px 100px !important;
-		color: $orange;
-		content: "" !important;
-		z-index: 999999999999 !important;
-		position: absolute !important;
-	}
-
-	#onetrust-banner-sdk  {
-		position: relative !important;
-	}
