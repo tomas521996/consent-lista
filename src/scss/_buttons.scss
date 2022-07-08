@@ -1,84 +1,75 @@
-// ------------------------ //
-//          BUTTONS         //
-// ------------------------ //
-#onetrust-banner-sdk button {
-	border-radius: $radius;
-}
-
-#onetrust-consent-sdk #onetrust-accept-btn-handler {
-	color: $white;
-
-	&:hover {
-		background-color: $dark-orange;
-		border-color: $dark-orange;
-	}
-
-	&:focus {
-		background-color: $dark-orange;
-		border-color: $dark-orange;
-	}
-}
+@import 'variables';
 
 
-#onetrust-consent-sdk #onetrust-reject-all-handler,
-#onetrust-consent-sdk #onetrust-pc-btn-handler {
-	color: $light-orange;
-	background-color: $transparent;
-	border-color: $light-orange;
+&.ot-iab-2 #onetrust-button-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-	&:hover {
-		color: $white;
-		background-color: $dark-orange;
-		border-color: $dark-orange;
-	}
+  & button {
+    display: block !important;
+  }
 
-	&:focus {
-		color: $white;
-		background-color: $dark-orange;
-		border-color: $dark-orange;
-	}
-}
+  #onetrust-accept-btn-handler,
+  #onetrust-reject-all-handler,
+  #onetrust-pc-btn-handler {
+    min-width: 180px !important;
+    min-height: 45px !important;
+  }
 
-#onetrust-banner-sdk :not(.ot-leg-btn-container)>button:not(.ot-link-btn):hover,
-#onetrust-banner-sdk :not(.ot-leg-btn-container)>button:not(.ot-link-btn):focus {
-	opacity: 1 !important;
-}
+  #onetrust-accept-btn-handler {
+    order: 3;
+    position: absolute !important;
+    right: 0 !important;
 
-#onetrust-banner-sdk.ot-iab-2 #onetrust-button-group {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+    color: $white;
 
-	& button {
-		display: block !important;
-	}
-}
+    &:hover {
+      background-color: $dark-orange;
+      border-color: $dark-orange;
+    }
 
-#onetrust-accept-btn-handler {
-	order: 3;
-	position: absolute  !important;
-	right: 0px !important;
-}
+    &:focus {
+      background-color: $dark-orange;
+      border-color: $dark-orange;
+    }
 
-@media only screen and (max-width: 425px) {
-	#onetrust-accept-btn-handler {
-		position: static !important;
-	}
-	}
+    @media only screen and (max-width: 425px) {
+      position: static !important;
+    }
+  }
 
-#onetrust-reject-all-handler {
-	order: 1;
-	margin-right: 50px !important;
-}
+  #onetrust-pc-btn-handler {
+    order: 2;
+  }
 
-#onetrust-pc-btn-handler {
-	order: 2;
+  #onetrust-reject-all-handler,
+  #onetrust-pc-btn-handler {
+    color: $light-orange;
+    background-color: $transparent;
+    border-color: $light-orange;
+
+    &:hover {
+      color: $white;
+      background-color: $dark-orange;
+      border-color: $dark-orange;
+    }
+
+    &:focus {
+      color: $white;
+      background-color: $dark-orange;
+      border-color: $dark-orange;
+    }
+  }
+
 }
 
 
-#onetrust-banner-sdk #onetrust-accept-btn-handler,
-#onetrust-banner-sdk #onetrust-reject-all-handler,
-#onetrust-banner-sdk #onetrust-pc-btn-handler {
-	min-width: 180px !important;
-	min-height: 45px !important;
+:not(.ot-leg-btn-container) > button:not(.ot-link-btn):hover,
+:not(.ot-leg-btn-container) > button:not(.ot-link-btn):focus {
+  opacity: 1 !important;
+}
+
+button {
+  border-radius: $radius;
 }
