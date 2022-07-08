@@ -1,58 +1,62 @@
 @import "_variables.scss";
-@import "_buttons.scss";
-@import "_settings-cookie.scss";
 
 // ------------ Vymazať slúži iba na test ------------ //
-.App-header {
-	height: 100vh;
-	width: 100vw;
-	background-color: #fefefe;
-}
+//.App-header {
+//	height: 100vh;
+//	width: 100vw;
+//	background-color: #fefefe;
+//}
 // ------------ Vymazať slúži iba na test ------------ //
 
 
-.ot-sdk-container {
-	max-width: 1170px !important;
+#onetrust-consent-sdk {
 
-& #onetrust-group-container {
-	max-width: 950px !important;
-}
-}
+  @import "_settings-cookie.scss";
 
-#onetrust-banner-sdk .ot-sdk-two.ot-sdk-columns {
-	width: 100%;
-}
+  #onetrust-banner-sdk {
+    @import "_buttons.scss";
 
-#onetrust-consent-sdk #onetrust-banner-sdk *:focus,
-#onetrust-consent-sdk #onetrust-banner-sdk:focus {
-	outline-color: $transparent;
-	outline-width: 0px !important;
-}
+    & *:focus,
+    &:focus {
+      outline-color: $transparent;
+      outline-width: 0 !important;
+    }
 
+    &.vertical-align-content #onetrust-button-group-parent {
+      position: static !important;
+      transform: translateY(0) !important;
+      margin-bottom: 2rem;
+    }
 
-#onetrust-banner-sdk.vertical-align-content #onetrust-button-group-parent {
-	position: static !important;
-	transform: translateY(0) !important;
-	margin-bottom: 2rem;
-}
+    .ot-sdk-ten.ot-sdk-columns,
+    .ot-sdk-two.ot-sdk-columns {
+      width: 100% !important;
+    }
 
-#onetrust-banner-sdk .ot-sdk-ten.ot-sdk-columns,
-#onetrust-banner-sdk .ot-sdk-two.ot-sdk-columns {
-	width: 100% !important;
-}
+    #onetrust-policy {
+      margin-top: 4rem !important;
+      margin-right: auto !important;
+      margin-bottom: 2rem !important;
+      margin-left: auto !important;
+    }
 
-#onetrust-banner-sdk #onetrust-policy {
-	margin-top: 4rem !important;
-	margin-right: auto  !important;
-	margin-bottom: 2rem  !important;
-	margin-left: auto  !important;
-}
+    .ot-sdk-container {
+      max-width: 1170px !important;
 
-.ot-sdk-container::after {
-	height: 10px;
-	width: 100%;
-	background-color: $orange;
-	position: absolute;
-	top: 0px;
-	border-radius: 0px 0px 3px 3px;
+      ::after {
+        height: 10px;
+        width: 100%;
+        background-color: $orange;
+        position: absolute;
+        top: 0;
+        border-radius: 0 0 3px 3px;
+      }
+
+      & #onetrust-group-container {
+        max-width: 950px !important;
+      }
+
+    }
+
+  }
 }
