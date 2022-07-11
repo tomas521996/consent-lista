@@ -16,6 +16,11 @@
   #onetrust-banner-sdk {
     @import "buttons";
 
+    .ot-link-btn.onetrust-vendors-list-handler {
+      text-decoration-line: underline;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
     & *:focus,
     &:focus {
       outline-color: $transparent;
@@ -39,8 +44,9 @@
 
     .ot-sdk-container {
       max-width: 1170px !important;
+      padding: 0;
 
-      ::after {
+      &::after {
         height: 10px;
         width: 100%;
         background-color: $orange;
@@ -49,11 +55,36 @@
         border-radius: 0 0 3px 3px;
       }
 
+      @media (min-width: 400px) {
+        width: 100%;
+      }
+
       .ot-sdk-row {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        margin: 0 30px;
+        margin: 0 20px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: -20%;
+          width: calc(20% + 20px);
+          height: 100%;
+          background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+          opacity: 0.1;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: -20%;
+          width: calc(20% + 20px);
+          height: 100%;
+          background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+          opacity: 0.1;
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
 
         #onetrust-group-container, #onetrust-button-group-parent {
           max-width: 950px;

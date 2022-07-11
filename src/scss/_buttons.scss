@@ -1,19 +1,22 @@
 @import 'variables';
 
-$mobile-max-width: 680px;
-
 &.ot-iab-2 #onetrust-button-group {
   display: grid;
   grid-template-columns: 190px 190px auto;
   justify-items: end;
+  margin-right: 0;
 
   @media only screen and (max-width: $mobile-max-width) {
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
   }
 
+  @media only screen and (min-width: 769px), only screen and (min-width: 426px) and (max-width: 896px) {
+    margin-right: 0;
+  }
+
   .has-reject-all-button & {
-    @media only screen and (min-width: $mobile-max-width) and (max-width: 896px) {
+    @media only screen and (min-width: 426px) and (max-width: 896px) {
       width: 100%;
     }
   }
