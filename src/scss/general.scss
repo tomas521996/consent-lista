@@ -1,4 +1,4 @@
-@import "_variables.scss";
+@import "variables";
 
 // ------------ Vymazať slúži iba na test ------------ //
 //.App-header {
@@ -11,10 +11,10 @@
 
 #onetrust-consent-sdk {
 
-  @import "_settings-cookie.scss";
+  @import "settings-cookie.scss";
 
   #onetrust-banner-sdk {
-    @import "_buttons.scss";
+    @import "buttons";
 
     & *:focus,
     &:focus {
@@ -34,10 +34,7 @@
     }
 
     #onetrust-policy {
-      margin-top: 4rem !important;
-      margin-right: auto !important;
-      margin-bottom: 2rem !important;
-      margin-left: auto !important;
+      margin: 4rem auto 2rem !important;
     }
 
     .ot-sdk-container {
@@ -52,8 +49,15 @@
         border-radius: 0 0 3px 3px;
       }
 
-      & #onetrust-group-container {
-        max-width: 950px !important;
+      .ot-sdk-row {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin: 0 30px;
+
+        #onetrust-group-container, #onetrust-button-group-parent {
+          max-width: 950px;
+        }
       }
 
     }
