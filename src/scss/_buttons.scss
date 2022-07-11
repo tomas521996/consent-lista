@@ -1,27 +1,40 @@
 @import 'variables';
 
+$mobile-max-width: 680px;
 
 &.ot-iab-2 #onetrust-button-group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 190px 190px auto;
+  justify-items: end;
+
+  @media only screen and (max-width: $mobile-max-width) {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  .has-reject-all-button & {
+    @media only screen and (min-width: $mobile-max-width) and (max-width: 896px) {
+      width: 100%;
+    }
+  }
 
   & button {
     display: block !important;
+
+    @media only screen and (max-width: $mobile-max-width) {
+      width: 100%;
+    }
   }
 
   #onetrust-accept-btn-handler,
   #onetrust-reject-all-handler,
   #onetrust-pc-btn-handler {
-    min-width: 180px !important;
-    min-height: 45px !important;
+    min-width: 180px;
+    min-height: 45px;
   }
 
   #onetrust-accept-btn-handler {
     order: 3;
-    position: absolute !important;
-    right: 0 !important;
-
     color: $white;
 
     &:hover {
@@ -34,9 +47,13 @@
       border-color: $dark-orange;
     }
 
-    @media only screen and (max-width: 425px) {
-      position: static !important;
+    @media only screen and (max-width: $mobile-max-width) {
+      //position: static !important;
     }
+  }
+
+  #onetrust-reject-all-handler {
+    order: 1;
   }
 
   #onetrust-pc-btn-handler {
