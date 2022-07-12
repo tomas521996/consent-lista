@@ -24,26 +24,34 @@
     & *:focus,
     &:focus {
       outline-color: $transparent;
-      outline-width: 0 !important;
+      outline-width: 0;
     }
 
     &.vertical-align-content #onetrust-button-group-parent {
-      position: static !important;
-      transform: translateY(0) !important;
-      margin-bottom: 2rem;
+      @media only screen and (min-width: 897px) and (max-width: 1023px),
+             only screen and (min-width: 1024px) {
+        position: static;
+        transform: translateY(0);
+        margin-bottom: 2rem;
+      }
     }
 
     .ot-sdk-ten.ot-sdk-columns,
     .ot-sdk-two.ot-sdk-columns {
-      width: 100% !important;
+      width: 100%;
+
+      @media (min-width: 550px) {
+        width: 100%;
+        margin-left: 0;
+      }
     }
 
     #onetrust-policy {
-      margin: 4rem auto 2rem !important;
+      margin: 4rem auto 2rem;
     }
 
     .ot-sdk-container {
-      max-width: 1170px !important;
+      max-width: 1170px;
       padding: 0;
 
       &::after {
@@ -88,6 +96,15 @@
 
         #onetrust-group-container, #onetrust-button-group-parent {
           max-width: 950px;
+        }
+
+        #onetrust-group-container {
+          @media only screen and (max-width: $mobile-max-width) {
+            overflow-y: scroll;
+            height: 0;
+            min-height: 240px;
+            margin-bottom: 20px;
+          }
         }
       }
 

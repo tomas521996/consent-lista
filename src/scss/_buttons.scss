@@ -1,6 +1,6 @@
 @import 'variables';
 
-&.ot-iab-2 #onetrust-button-group {
+#onetrust-button-group {
   display: grid;
   grid-template-columns: 190px 190px auto;
   justify-items: end;
@@ -13,12 +13,6 @@
 
   @media only screen and (min-width: 769px), only screen and (min-width: 426px) and (max-width: 896px) {
     margin-right: 0;
-  }
-
-  .has-reject-all-button & {
-    @media only screen and (min-width: 426px) and (max-width: 896px) {
-      width: 100%;
-    }
   }
 
   & button {
@@ -34,6 +28,7 @@
   #onetrust-pc-btn-handler {
     min-width: 180px;
     min-height: 45px;
+    margin-right: 0;
   }
 
   #onetrust-accept-btn-handler {
@@ -49,14 +44,11 @@
       background-color: $dark-orange;
       border-color: $dark-orange;
     }
-
-    @media only screen and (max-width: $mobile-max-width) {
-      //position: static !important;
-    }
   }
 
   #onetrust-reject-all-handler {
     order: 1;
+    justify-self: start;
   }
 
   #onetrust-pc-btn-handler {
@@ -82,6 +74,12 @@
     }
   }
 
+}
+
+.has-reject-all-button #onetrust-button-group {
+  @media only screen and (min-width: 426px) and (max-width: 896px) {
+    width: 100%;
+  }
 }
 
 
