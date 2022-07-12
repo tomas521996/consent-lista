@@ -1,0 +1,42 @@
+// -------------------------------------- //
+//          SETTINGS VENDORS              //
+// -------------------------------------- //
+
+@import "variables";
+@import "mixins";
+
+#onetrust-pc-sdk {
+
+	#filter-btn-handler {
+		background-color: $orange;
+		border: none !important;
+	}
+
+	.ot-chkbox label::before {
+		border-color: $orange;
+	}
+
+	.ot-chkbox input:checked~label::before {
+		background-color: $orange;
+		border-color: $orange;
+	}
+
+	.ot-plus-minus span {
+		background-color: $white;
+	}
+
+	.ot-acc-txt {
+
+		.ot-ven-dets {
+				background-color: $white;
+				border-radius: $radius;
+
+				h4, p, span {
+					color: $light-black;
+				}
+
+			}
+
+	}
+
+}
