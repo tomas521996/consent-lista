@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 #onetrust-button-group {
   display: grid;
@@ -16,7 +17,7 @@
   }
 
   & button {
-    display: block !important;
+    display: block;
 
     @media only screen and (max-width: $mobile-max-width) {
       width: 100%;
@@ -32,18 +33,9 @@
   }
 
   #onetrust-accept-btn-handler {
+    @include accept_button;
     order: 3;
-    color: $white;
 
-    &:hover {
-      background-color: $dark-orange;
-      border-color: $dark-orange;
-    }
-
-    &:focus {
-      background-color: $dark-orange;
-      border-color: $dark-orange;
-    }
   }
 
   #onetrust-reject-all-handler {
@@ -57,21 +49,7 @@
 
   #onetrust-reject-all-handler,
   #onetrust-pc-btn-handler {
-    color: $light-orange;
-    background-color: $transparent;
-    border-color: $light-orange;
-
-    &:hover {
-      color: $white;
-      background-color: $dark-orange;
-      border-color: $dark-orange;
-    }
-
-    &:focus {
-      color: $white;
-      background-color: $dark-orange;
-      border-color: $dark-orange;
-    }
+    @include button;
   }
 
 }

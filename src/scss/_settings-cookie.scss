@@ -2,41 +2,115 @@
 //          SETTINGS COOKIE               //
 // -------------------------------------- //
 
-.ot-pc-footer-logo, .ot-pc-logo {
-	display: none !important;
-}
+@import "variables";
+@import "mixins";
 
-#onetrust-pc-sdk.otPcCenter {
-	box-shadow: none !important;
-}
+#onetrust-pc-sdk {
 
-#onetrust-pc-sdk .ot-switch-nob {
-	background-color: $red;
-	border-color: $red;
+	@media only screen and (max-width: 600px) {
+		height: calc(100vh - 100px) !important; // height has been set directly on element, so need to use !important
+		bottom: 0;
+		position: fixed;
+	}
 
-&:before {
-	background-color: $white;
-}
-}
+	&.otPcCenter {
+		box-shadow: none;
+		top: unset;
+	}
 
-#onetrust-pc-sdk .ot-tgl input:checked+.ot-switch .ot-switch-nob {
-	background-color: $green;
-	border-color: $green;
-}
+	.ot-pc-header {
+		max-height: 10px;
+		width: 100%;
+		background-color: $orange;
+		position: absolute;
+		top: 0;
+		border-radius: 0 0 3px 3px;
+		border-bottom: none;
+		padding: 0;
 
-#onetrust-pc-sdk .ot-vs-list .ot-always-active,
-#onetrust-pc-sdk .ot-cat-grp .ot-always-active {
-	color: $green;
-}
+		@media only screen and (max-width: $mobile-max-width) {
+			border-radius: unset;
+			height: 5px;
+		}
+	}
 
-#onetrust-pc-sdk .ot-cat-grp div {
-	background-color: $white;
-}
+	.ot-pc-footer-logo, .ot-pc-logo {
+		display: none;
+	}
 
-.ot-cat-header {
-color: $dark-blue;
-}
+	.ot-switch-nob {
+		background-color: $red;
+		border-color: $red;
 
-.ot-accordion-layout p {
-	color: $light-black;
+		&:before {
+			background-color: $white;
+		}
+	}
+
+	.ot-tgl input:checked+.ot-switch .ot-switch-nob {
+		background-color: $green;
+		border-color: $green;
+	}
+
+	.ot-vs-list .ot-always-active,
+	.ot-cat-grp .ot-always-active {
+		color: $green;
+	}
+
+	.ot-cat-grp div {
+		background-color: $white;
+	}
+
+	.ot-cat-header {
+		color: $dark-blue;
+	}
+
+	.ot-accordion-layout p {
+		color: $light-black;
+	}
+
+	#accept-recommended-btn-handler,
+	.ot-pc-refuse-all-handler {
+		//display: none !important; // need to rewrite element inline style
+	}
+
+	.ot-plus-minus {
+		order: 3;
+		transition: transform 300ms;
+
+		span {
+			&:first-of-type {
+				transform: rotate(-135deg) translateY(4.5px);
+			}
+			&:last-of-type {
+				transform: rotate(-135deg) translateX(4.5px);
+			}
+		}
+	}
+
+	button {
+		&#accept-recommended-btn-handler, &.ot-pc-refuse-all-handler {
+			@include button;
+		}
+
+		&.save-preference-btn-handler {
+			@include accept_button;
+		}
+
+		&[aria-expanded=true]~.ot-acc-hdr {
+		.ot-plus-minus {
+			transform: rotate(180deg);
+
+			span:last-of-type {
+				left: 25%;
+				right: 25%;
+			}
+		}
+	}
+	}
+
+	.ot-pc-footer {
+		border-top: none;
+	}
+
 }

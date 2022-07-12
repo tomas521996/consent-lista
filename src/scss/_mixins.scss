@@ -1,0 +1,44 @@
+@import "variables";
+
+@mixin button-font {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+@mixin button {
+  @include button-font;
+  color: $light-orange;
+  background-color: $transparent;
+  border-color: $light-orange;
+
+  &:hover {
+    color: $white;
+    background-color: $dark-orange;
+    border-color: $dark-orange;
+  }
+
+  &:focus {
+    color: $white;
+    background-color: $dark-orange;
+    border-color: $dark-orange;
+  }
+
+}
+@mixin accept_button {
+  @include button-font;
+  color: $white;
+
+  &:hover {
+    background-color: $dark-orange;
+    border-color: $dark-orange;
+  }
+
+  &:focus {
+    background-color: $dark-orange;
+    border-color: $dark-orange;
+  }
+
+}
