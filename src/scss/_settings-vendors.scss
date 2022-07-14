@@ -3,31 +3,31 @@
 // -------------------------------------- //
 
 @import "variables";
-@import "mixins";
 
 #onetrust-pc-sdk {
 
-	#filter-btn-handler {
-		background-color: $orange;
-		border: none !important;
-	}
+	#ot-pc-lst {
+		#filter-btn-handler {
+			background-color: $orange;
+			border: none !important;
+		}
 
-	.ot-chkbox label::before {
-		border-color: $orange;
-	}
+		.ot-chkbox label::before {
+			border-color: $orange;
+		}
 
-	.ot-chkbox input:checked~label::before {
-		background-color: $orange;
-		border-color: $orange;
-	}
+		.ot-chkbox input:checked ~ label::before {
+			background-color: $orange;
+			border-color: $orange;
+		}
 
-	.ot-plus-minus span {
-		background-color: $white;
-	}
+		.ot-plus-minus span {
+			background-color: $white;
+		}
 
-	.ot-acc-txt {
+		.ot-acc-txt {
 
-		.ot-ven-dets {
+			.ot-ven-dets {
 				background-color: $white;
 				border-radius: $radius;
 
@@ -37,6 +37,7 @@
 
 			}
 
+		}
 	}
 
 }

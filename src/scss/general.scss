@@ -49,7 +49,7 @@
     }
 
     #onetrust-policy {
-      margin: 4rem auto 2rem;
+      margin: 2rem auto 2rem;
     }
 
     .ot-sdk-container {
@@ -111,8 +111,9 @@
           @media only screen and (max-width: $mobile-max-width) {
             overflow-y: scroll;
             height: 0;
-            min-height: 240px;
+            min-height: calc(60vh - 3 * (45px + 1rem) - 20px);
             margin-bottom: 20px;
+            padding-right: 5px;
           }
         }
       }

@@ -7,110 +7,122 @@
 
 #onetrust-pc-sdk {
 
-	@media only screen and (max-width: 600px) {
-		height: calc(100vh - 100px) !important; // height has been set directly on element, so need to use !important
-		bottom: 0;
-		position: fixed;
-	}
+  @media only screen and (max-width: 600px) {
+    height: calc(100vh - 100px) !important; // height has been set directly on element, so need to use !important
+    bottom: 0;
+    position: fixed;
+  }
 
-	&.otPcCenter {
-		box-shadow: none;
-		top: unset;
-	}
+  &.otPcCenter {
+    box-shadow: none;
+    top: unset;
+  }
 
-	.ot-pc-header {
-		max-height: 10px;
-		width: 100%;
-		background-color: $orange;
-		position: absolute;
-		top: 0;
-		border-radius: 0 0 3px 3px;
-		border-bottom: none;
-		padding: 0;
+  .ot-pc-header {
+    max-height: 10px;
+    width: 100%;
+    background-color: $orange;
+    position: absolute;
+    top: 0;
+    border-radius: 0 0 3px 3px;
+    border-bottom: none;
+    padding: 0;
 
-		@media only screen and (max-width: $mobile-max-width) {
-			border-radius: unset;
-			height: 5px;
-		}
-	}
+    @media only screen and (max-width: $mobile-max-width) {
+      border-radius: unset;
+      height: 5px;
+    }
+  }
 
-	.ot-pc-footer-logo, .ot-pc-logo {
-		display: none;
-	}
+  .ot-pc-footer-logo, .ot-pc-logo {
+    display: none;
+  }
 
-	.ot-switch-nob {
-		background-color: $red;
-		border-color: $red;
+  .ot-switch-nob {
+    background-color: $red;
+    border-color: $red;
 
-		&:before {
-			background-color: $white;
-		}
-	}
+    &:before {
+      background-color: $white;
+    }
+  }
 
-	.ot-tgl input:checked+.ot-switch .ot-switch-nob {
-		background-color: $green;
-		border-color: $green;
-	}
+  .ot-tgl input:checked + .ot-switch .ot-switch-nob {
+    background-color: $green;
+    border-color: $green;
+  }
 
-	.ot-vs-list .ot-always-active,
-	.ot-cat-grp .ot-always-active {
-		color: $green;
-	}
+  .ot-vs-list .ot-always-active,
+  .ot-cat-grp .ot-always-active {
+    color: $green;
+  }
 
-	.ot-cat-grp div {
-		background-color: $white;
-	}
+  .ot-cat-grp {
+    .ot-cat-item {
+      background-color: $white;
+			border: none;
+			border-radius: 0;
 
-	.ot-cat-header {
-		color: $dark-blue;
-	}
+      &:first-of-type {
+        border-radius: 5px 5px 0 0;
+      }
+      &:last-of-type {
+        border-radius: 0 0 5px 5px;
+      }
+    }
+  }
 
-	.ot-accordion-layout p {
-		color: $light-black;
-	}
+  .ot-cat-header {
+    color: $dark-blue;
+  }
 
-	#accept-recommended-btn-handler,
-	.ot-pc-refuse-all-handler {
-		//display: none !important; // need to rewrite element inline style
-	}
+  .ot-accordion-layout p {
+    color: $light-black;
+  }
 
-	.ot-plus-minus {
-		order: 3;
-		transition: transform 300ms;
+  #accept-recommended-btn-handler,
+  .ot-pc-refuse-all-handler {
+    //display: none !important; // need to rewrite element inline style
+  }
 
-		span {
-			&:first-of-type {
-				transform: rotate(-135deg) translateY(4.5px);
-			}
-			&:last-of-type {
-				transform: rotate(-135deg) translateX(4.5px);
-			}
-		}
-	}
+  .ot-plus-minus {
+    order: 3;
+    transition: transform 300ms;
 
-	button {
-		&#accept-recommended-btn-handler, &.ot-pc-refuse-all-handler {
-			@include button;
-		}
+    span {
+      &:first-of-type {
+        transform: rotate(-135deg) translateY(4.5px);
+      }
 
-		&.save-preference-btn-handler {
-			@include accept_button;
-		}
+      &:last-of-type {
+        transform: rotate(-135deg) translateX(4.5px);
+      }
+    }
+  }
 
-		&[aria-expanded=true]~.ot-acc-hdr {
-		.ot-plus-minus {
-			transform: rotate(180deg);
+  button {
+    &#accept-recommended-btn-handler, &.ot-pc-refuse-all-handler {
+      @include button;
+    }
 
-			span:last-of-type {
-				left: 25%;
-				right: 25%;
-			}
-		}
-	}
-	}
+    &.save-preference-btn-handler {
+      @include accept_button;
+    }
 
-	.ot-pc-footer {
-		border-top: none;
-	}
+    &[aria-expanded=true] ~ .ot-acc-hdr {
+      .ot-plus-minus {
+        transform: rotate(180deg);
+
+        span:last-of-type {
+          left: 25%;
+          right: 25%;
+        }
+      }
+    }
+  }
+
+  .ot-pc-footer {
+    border-top: none;
+  }
 
 }
