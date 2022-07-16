@@ -19,12 +19,14 @@
     color: $white;
     background-color: $dark-orange;
     border-color: $dark-orange;
+		opacity: 1;
   }
 
   &:focus {
     color: $white;
     background-color: $dark-orange;
     border-color: $dark-orange;
+		opacity: 1;
   }
 
 }
@@ -36,11 +38,13 @@
   &:hover {
     background-color: $dark-orange;
     border-color: $dark-orange;
+		opacity: 1;
   }
 
   &:focus {
     background-color: $dark-orange;
     border-color: $dark-orange;
+		opacity: 1;
   }
 
 }
