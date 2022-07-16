@@ -58,6 +58,11 @@
   }
 
   .ot-cat-grp {
+
+		.ot-accordion-layout ul.ot-subgrps .ot-subgrp h5 {
+			color: $light-black;
+		}
+
     .ot-cat-item {
       background-color: $white;
 			border: none;
@@ -88,6 +93,7 @@
   .ot-plus-minus {
     order: 3;
     transition: transform 300ms;
+		margin-right: 1rem;
 
     span {
       &:first-of-type {
@@ -120,6 +126,10 @@
       }
     }
   }
+
+		.category-vendors-list-handler, .category-vendors-list-handler + a {
+		color: $dark-blue;
+	}
 
   .ot-pc-footer {
     border-top: none;
