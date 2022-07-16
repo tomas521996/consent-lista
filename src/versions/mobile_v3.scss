@@ -1,0 +1,15 @@
+
+
+	@media only screen and (max-width: 680px) {
+		#onetrust-consent-sdk #onetrust-banner-sdk #onetrust-button-group #onetrust-accept-btn-handler {
+			order: 1;
+		}
+
+		#onetrust-consent-sdk #onetrust-banner-sdk #onetrust-button-group #onetrust-reject-all-handler {
+			order: 3;
+		}
+
+		#onetrust-consent-sdk #onetrust-banner-sdk #onetrust-button-group #onetrust-pc-btn-handler {
+			order: 2;
+		}
+	}
